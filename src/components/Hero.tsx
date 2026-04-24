@@ -1,4 +1,4 @@
-import { ArrowRight, Clock, Truck, ShieldCheck } from "lucide-react";
+import { ArrowRight, Clock, Truck, ShieldCheck, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImg from "@/assets/hero-laundry.jpg";
 
@@ -17,7 +17,7 @@ const Bubble = ({ size, left, delay, duration }: { size: number; left: string; d
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen pt-28 pb-20 overflow-hidden gradient-hero">
+    <section id="home" className="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden gradient-hero">
       {/* Floating bubbles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <Bubble size={40} left="5%" delay="0s" duration="9s" />
@@ -98,6 +98,18 @@ const Hero = () => {
           </div>
         </div>
       </div>
+
+      {/* WhatsApp Floating Button */}
+      <a
+        href="https://wa.me/977XXXXXXXXXX"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full bg-[#25D366] shadow-lg flex items-center justify-center hover:scale-110 transition-transform duration-300 animate-float"
+        style={{ animationDuration: "3s" }}
+        aria-label="Chat on WhatsApp"
+      >
+        <MessageCircle className="w-7 h-7 text-white fill-white" />
+      </a>
     </section>
   );
 };
