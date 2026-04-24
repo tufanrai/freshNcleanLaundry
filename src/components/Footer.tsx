@@ -56,7 +56,6 @@ const Footer = () => {
 
         <div className="border-t border-background/10 pt-6 flex flex-col sm:flex-row gap-4 justify-between items-center text-xs text-background/50">
           <p>© {new Date().getFullYear()} Fresh and Clean Laundry & Dry Cleaning. All rights reserved.</p>
-          <p>Made with 💙 in Nepal</p>
         </div>
       </div>
     </footer>
