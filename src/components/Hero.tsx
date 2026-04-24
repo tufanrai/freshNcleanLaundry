@@ -37,7 +37,7 @@ const Hero = () => {
       <div className="container relative z-10 grid lg:grid-cols-2 gap-12 items-center">
         <div className="opacity-0 animate-fade-in-up" style={{ animationDelay: "0.1s" }}>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass shadow-soft mb-6">
-            <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" />
+            <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
             <span className="text-sm font-medium text-foreground">Open Now • 8 AM – 8 PM Daily</span>
           </div>
 
