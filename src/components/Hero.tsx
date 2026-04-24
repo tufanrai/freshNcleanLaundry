@@ -1,4 +1,4 @@
-import { ArrowRight, Clock, Truck, ShieldCheck } from "lucide-react";
+import { ArrowRight, Clock, Truck, ShieldCheck, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import heroImg from "@/assets/hero-laundry.jpg";
 
@@ -17,7 +17,7 @@ const Bubble = ({ size, left, delay, duration }: { size: number; left: string; d
 
 const Hero = () => {
   return (
-    <section id="home" className="relative min-h-screen pt-28 pb-20 overflow-hidden gradient-hero">
+    <section id="home" className="relative min-h-screen flex items-center pt-28 pb-20 overflow-hidden gradient-hero">
       {/* Floating bubbles */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
         <Bubble size={40} left="5%" delay="0s" duration="9s" />
