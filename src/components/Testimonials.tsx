@@ -3,22 +3,34 @@ import { Quote, Star } from "lucide-react";
 
 const testimonials = [
   {
-    name: "Aarati Shrestha",
+    name: "Ganga Khatri",
     role: "Kathmandu",
-    text: "My silk saree came back looking brand new! The team is incredibly careful with delicate fabrics. Highly recommend for ethnic wear.",
-    initials: "AS",
+    text: "wow, it is one of the best laundry i have found in kathmandu. i experience very good quality service fom this laundry. comparatively i  found this one the best. thank you so much fresh and clean laundry.",
+    initials: "GK",
   },
   {
-    name: "Bibek Karki",
-    role: "Lalitpur",
-    text: "Fast pickup, fast delivery, and my suits have never looked sharper. Best dry cleaning service I've used in Nepal.",
-    initials: "BK",
+    name: "Man Bahadur Basnet",
+    role: "Kathmandu",
+    text: "Amazing laundry and dry cleaning service. My clothes, shoes, and blankets came back spotless and fresh, with every stain removed and folded perfectly.",
+    initials: "MBB",
   },
   {
-    name: "Sushmita Rai",
-    role: "Bhaktapur",
-    text: "They cleaned our heavy galaicha and sofa covers beautifully. Very professional, polite staff. Will use again!",
-    initials: "SR",
+    name: "Jagat Shah",
+    role: "Kathmandu",
+    text: "Best service regular i used to visit for my laundry",
+    initials: "JS",
+  },
+  {
+    name: "Prabhat Shrestha",
+    role: "Kathmandu",
+    text: "Amazing service. New machines and new owner . Friendly owner . Will keep wahsing my clothes here",
+    initials: "PS",
+  },
+  {
+    name: "Sunita Shrestha",
+    role: "Kathmandu",
+    text: "I love this laundry i have experience it. The people of this laundry are so good. It washes my clothes in time and the price is also quite good. Do visit this laundry!!",
+    initials: "SS",
   },
 ];
 
@@ -26,7 +38,10 @@ const Testimonials = () => {
   const [active, setActive] = useState(0);
 
   useEffect(() => {
-    const t = setInterval(() => setActive((a) => (a + 1) % testimonials.length), 5000);
+    const t = setInterval(
+      () => setActive((a) => (a + 1) % testimonials.length),
+      5000,
+    );
     return () => clearInterval(t);
   }, []);
 
@@ -64,8 +79,12 @@ const Testimonials = () => {
                 {testimonials[active].initials}
               </div>
               <div>
-                <div className="font-display font-bold text-foreground">{testimonials[active].name}</div>
-                <div className="text-sm text-muted-foreground">{testimonials[active].role}</div>
+                <div className="font-display font-bold text-foreground">
+                  {testimonials[active].name}
+                </div>
+                <div className="text-sm text-muted-foreground">
+                  {testimonials[active].role}
+                </div>
               </div>
             </div>
           </div>
@@ -77,7 +96,9 @@ const Testimonials = () => {
                 onClick={() => setActive(i)}
                 aria-label={`Testimonial ${i + 1}`}
                 className={`h-2 rounded-full transition-all duration-300 ${
-                  active === i ? "w-10 gradient-primary" : "w-2 bg-primary/30 hover:bg-primary/50"
+                  active === i
+                    ? "w-10 gradient-primary"
+                    : "w-2 bg-primary/30 hover:bg-primary/50"
                 }`}
               />
             ))}

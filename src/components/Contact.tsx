@@ -19,7 +19,10 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="relative py-24 bg-background overflow-hidden">
+    <section
+      id="contact"
+      className="relative py-24 bg-background overflow-hidden"
+    >
       <div className="absolute -top-20 -left-20 w-96 h-96 rounded-full bg-primary/10 blur-3xl" />
 
       <div className="container relative">
@@ -39,10 +42,30 @@ const Contact = () => {
           {/* Info side */}
           <div className="lg:col-span-2 space-y-5">
             {[
-              { icon: Phone, title: "Call Us", value: "+977 98XXXXXXXX", href: "tel:+977" },
-              { icon: Mail, title: "Email", value: "hello@freshandclean.com.np", href: "mailto:hello@freshandclean.com.np" },
-              { icon: MapPin, title: "Location", value: "Kathmandu, Nepal" },
-              { icon: Clock, title: "Open Hours", value: "8:00 AM – 8:00 PM (All Week)" },
+              {
+                icon: Phone,
+                title: "Call Us",
+                value: "+977 9704524133",
+                href: "tel:+9779704524133",
+              },
+              {
+                icon: Mail,
+                title: "Email",
+                value: "query@freshandclean.com.np",
+                href: "mailto:query@freshandclean.com.np",
+              },
+              {
+                icon: MapPin,
+                title: "Location",
+                value: "Baluwakhani, Budhanilkantha",
+                href: "https://maps.app.goo.gl/s411jnRn6QYRjAht7",
+              },
+
+              {
+                icon: Clock,
+                title: "Open Hours",
+                value: "8:00 AM – 8:00 PM (All Week)",
+              },
             ].map((item, i) => {
               const Wrap = item.href ? "a" : "div";
               return (
@@ -51,13 +74,18 @@ const Contact = () => {
                   {...(item.href ? { href: item.href } : {})}
                   className="group flex gap-4 p-5 rounded-2xl bg-card border border-border/50 shadow-card hover-lift block"
                   style={{ animationDelay: `${i * 0.1}s` }}
+                  target="_blank"
                 >
                   <div className="shrink-0 w-12 h-12 rounded-xl gradient-primary flex items-center justify-center shadow-glow group-hover:rotate-6 transition-transform">
                     <item.icon className="w-5 h-5 text-primary-foreground" />
                   </div>
                   <div>
-                    <div className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-1">{item.title}</div>
-                    <div className="text-foreground font-display font-semibold">{item.value}</div>
+                    <div className="text-xs uppercase tracking-wider text-muted-foreground font-semibold mb-1">
+                      {item.title}
+                    </div>
+                    <div className="text-foreground font-display font-semibold">
+                      {item.value}
+                    </div>
                   </div>
                 </Wrap>
               );
@@ -70,7 +98,9 @@ const Contact = () => {
             className="lg:col-span-3 bg-card rounded-3xl p-8 sm:p-10 shadow-float border border-border/50 space-y-5"
           >
             <div>
-              <label className="text-sm font-semibold text-foreground mb-2 block">Your Name</label>
+              <label className="text-sm font-semibold text-foreground mb-2 block">
+                Your Name
+              </label>
               <Input
                 value={form.name}
                 onChange={(e) => setForm({ ...form, name: e.target.value })}
@@ -79,7 +109,9 @@ const Contact = () => {
               />
             </div>
             <div>
-              <label className="text-sm font-semibold text-foreground mb-2 block">Phone Number</label>
+              <label className="text-sm font-semibold text-foreground mb-2 block">
+                Phone Number
+              </label>
               <Input
                 value={form.phone}
                 onChange={(e) => setForm({ ...form, phone: e.target.value })}
@@ -88,7 +120,9 @@ const Contact = () => {
               />
             </div>
             <div>
-              <label className="text-sm font-semibold text-foreground mb-2 block">What do you need cleaned?</label>
+              <label className="text-sm font-semibold text-foreground mb-2 block">
+                What do you need cleaned?
+              </label>
               <Textarea
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
