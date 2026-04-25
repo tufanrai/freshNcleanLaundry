@@ -1,5 +1,15 @@
-{
-  "name": "worker-name",
-  "compatibility_date": "2026-04-25",
-  "main": "src/index.ts"
+
+	  {
+	    "$schema": "node_modules/wrangler/config-schema.json",
+	    "name": "freshandcleanlaundry",
+	    "compatibility_date": "2026-04-25",
+	    "observability": {
+	      "enabled": true
+	    },
+	    "assets": {
+	      "not_found_handling": "single-page-application"
+	    },
+	    "compatibility_flags": [
+	      "nodejs_compat"
+	    ]
 }
